@@ -1,7 +1,9 @@
 const express = require("express");
 const helmet = require("helmet");
 
-console.log("environment", process.env.NODE_ENV);
+const secrets = require("../config/secrets.js");
+
+console.log("environment", secrets.environment);
 
 const apiRouter = require("./api-router.js");
 
