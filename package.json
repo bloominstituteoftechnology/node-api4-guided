@@ -1,29 +1,28 @@
 {
-  "name": "webapi-deployment",
+  "name": "node-api4-guided",
   "version": "1.0.0",
-  "description": "Guided project for **Web API IV** module.",
+  "description": "Guided project for **Node API** module 4.",
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LambdaSchool/webapi-deployment.git"
+    "url": "git+https://github.com/LambdaSchool/node-api4-guided.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Lambda School",
   "bugs": {
-    "url": "https://github.com/LambdaSchool/webapi-deployment/issues"
+    "url": "https://github.com/LambdaSchool/node-api4-guided/issues"
   },
-  "homepage": "https://github.com/LambdaSchool/webapi-deployment#readme",
+  "homepage": "https://github.com/LambdaSchool/node-api4-guided#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "helmet": "^3.18.0",
-    "knex": "^0.18.0",
-    "sqlite3": "^4.0.9"
+    "helmet": "^3.21.0",
+    "knex": "^0.19.3",
+    "sqlite3": "^4.1.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.2"
   }
 }
