@@ -1,16 +1,16 @@
-const express = require('express');
+const express = require("express");
 
-const Shouts = require('../shouts/shouts-model.js');
+const Shouts = require("../shouts/shouts-model.js");
 
 const router = express.Router();
 
 router.use(express.json());
 
-router.get('/', (req, res) => {
-  res.status(200).json({ api: 'up' });
+router.get("/", (req, res) => {
+  res.status(200).json({ api: "up" });
 });
 
-router.get('/shouts', (req, res, next) => {
+router.get("/shouts", (req, res, next) => {
   Shouts.find()
     .then(shouts => {
       res.status(200).json(shouts);
@@ -18,7 +18,7 @@ router.get('/shouts', (req, res, next) => {
     .catch(error => next(error));
 });
 
-router.post('/shouts', (req, res, next) => {
+router.post("/shouts", (req, res, next) => {
   Shouts.add(req.body)
     .then(shout => {
       res.status(201).json(shout);
