@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
       res.status(200).json({ message: messageOfTheDay, shouts });
     })
     .catch(err => {
-      res.status(500).json((message: err));
+      res.status(500).json({ message: err });
     });
 });
 
