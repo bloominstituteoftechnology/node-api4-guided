@@ -5,6 +5,11 @@ require('dotenv').config();
 
 const server = require("./api/server.js");
 
+// write custom middelware - globally plugged in mw
+server.use(function (req, res) {
+  res.status(404).send(`Ain't nobody got time for dat!`);
+});
+
 // make the port be assigned by the Serer
 // heroku will place the .PORT environment value on their server
 const port = process.env.PORT || 5000;

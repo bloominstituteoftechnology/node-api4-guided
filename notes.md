@@ -15,3 +15,7 @@ Process
 Environment: process.env === JS obj
 ## The API CAN READ that obj
 OS Admins can add properties to that JS object/environment
+
+.env: instead of hard coding, I will have it in a config area
+
+download npm i cors to connect with react app
