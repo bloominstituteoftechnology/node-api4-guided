@@ -1,3 +1,8 @@
+// As earliest as possible. In in the index.js file
+require('dotenv').config(); 
+// read from a .env file located at the root folder/project
+// and merge the key/value pairs into process.env
+
 const server = require("./api/server.js");
 
 // make the port be assigned by the Serer

@@ -9,14 +9,17 @@ router.use(express.json());
 router.get("/", (req, res) => {
   const environment = process.env;
   const port = process.env.PORT || 5000;
-  
+
   res.status(200).json({ api: "up", port, environment });
 });
 
 router.get("/shouts", (req, res, next) => {
   Shouts.find()
     .then(shouts => {
-      res.status(200).json(shouts);
+      res.status(200).json({ 
+        motd: process.env.MOTD, 
+        shouts 
+      }); // obj = MOTD, read the value from somewhere
     })
     .catch(error => next(error));
 });
