@@ -26,6 +26,18 @@ router.post("/shouts", (req, res, next) => {
     .catch(error => next(error));
 });
 
+router.delete("/shouts/:id", (req, res) => {
+  Shouts.remove(req.params.id)
+    .then(count => {
+      if (count) {
+        res.status(204).end();
+      } else {
+        res.status(404).json({ message: "not found" });
+      }
+    })
+    .catch(error => next(error));
+});
+
 router.use(errorHandler);
 
 function errorHandler(error, req, res, next) {
