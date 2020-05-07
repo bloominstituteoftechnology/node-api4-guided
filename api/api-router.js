@@ -2,6 +2,8 @@ const express = require("express");
 
 const Shouts = require("../shouts/shouts-model.js");
 
+const restricted = require("../auth/restricted-middleware.js")
+
 const router = express.Router();
 
 router.use(express.json());
@@ -10,7 +12,7 @@ router.get("/", (req, res) => {
   res.status(200).json({ api: "up" });
 });
 
-router.get("/shouts", (req, res, next) => {
+router.get("/shouts", restricted, (req, res, next) => {
   Shouts.find()
     .then(shouts => {
       res.status(200).json(shouts);
@@ -18,7 +20,7 @@ router.get("/shouts", (req, res, next) => {
     .catch(error => next(error));
 });
 
-router.post("/shouts", (req, res, next) => {
+router.post("/shouts", restricted, (req, res, next) => {
   Shouts.add(req.body)
     .then(shout => {
       res.status(201).json(shout);
@@ -26,7 +28,7 @@ router.post("/shouts", (req, res, next) => {
     .catch(error => next(error));
 });
 
-router.delete("/shouts/:id", (req, res) => {
+router.delete("/shouts/:id", restricted, (req, res) => {
   Shouts.remove(req.params.id)
     .then(count => {
       if (count) {
