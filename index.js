@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const server = require("./api/server.js");
 
 // Heroku will add the PORT variable to the enviroment
