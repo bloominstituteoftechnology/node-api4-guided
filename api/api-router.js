@@ -1,7 +1,7 @@
 const express = require("express");
 
 const Shouts = require("../shouts/shouts-model.js");
-
+const restricted = require("../auth/restricted-middleware.js")
 const router = express.Router();
 
 router.use(express.json());
@@ -18,7 +18,7 @@ router.get("/shouts", (req, res, next) => {
     .catch(error => next(error));
 });
 
-router.post("/shouts", (req, res, next) => {
+router.post("/shouts", restricted, (req, res, next) => {
   Shouts.add(req.body)
     .then(shout => {
       res.status(201).json(shout);
