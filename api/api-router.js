@@ -1,8 +1,7 @@
 const express = require("express");
 
 const Shouts = require("../shouts/shouts-model.js");
-
-const restricted = require("../auth/restricted-middleware.js")
+const restricted = require("../auth/restricted-middleware.js");
 
 const router = express.Router();
 
@@ -28,7 +27,7 @@ router.post("/shouts", restricted, (req, res, next) => {
     .catch(error => next(error));
 });
 
-router.delete("/shouts/:id", restricted, (req, res) => {
+router.delete("/shouts/:id", (req, res) => {
   Shouts.remove(req.params.id)
     .then(count => {
       if (count) {
