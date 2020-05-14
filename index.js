@@ -2,7 +2,7 @@ require('dotenv').config();
 const server = require("./api/server.js");
 
 //console.log(process.env);
-
+// console.log(process.env.MOTD);
 
 
 const port = process.env.PORT ||  5000;
