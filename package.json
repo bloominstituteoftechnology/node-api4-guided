@@ -4,7 +4,8 @@
     "description": "Guided project for **Node API** module 4.",
     "main": "index.js",
     "scripts": {
-        "server": "nodemon index.js"
+        "server": "nodemon index.js",
+        "start": "node index.js"
     },
     "repository": {
         "type": "git",
@@ -23,6 +24,7 @@
         "sqlite3": "^5.0.0"
     },
     "devDependencies": {
+        "dotenv": "^8.2.0",
         "nodemon": "^2.0.4"
     }
 }
