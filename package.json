@@ -18,13 +18,13 @@
     },
     "homepage": "https://github.com/LambdaSchool/node-api4-guided#readme",
     "dependencies": {
+        "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "helmet": "^4.0.0",
         "knex": "^0.21.2",
         "sqlite3": "^5.0.0"
     },
     "devDependencies": {
-        "dotenv": "^8.2.0",
         "nodemon": "^2.0.4"
     }
 }
