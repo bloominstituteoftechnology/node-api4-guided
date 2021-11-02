@@ -10,8 +10,6 @@
         "type": "git",
         "url": "git+https://github.com/LambdaSchool/node-api4-guided.git"
     },
-    "keywords": [],
-    "author": "Lambda School",
     "bugs": {
         "url": "https://github.com/LambdaSchool/node-api4-guided/issues"
     },
