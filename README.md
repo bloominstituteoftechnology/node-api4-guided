@@ -1,13 +1,10 @@
-# Web API Deployment Challenge
+# Node API 4 Guided Project
 
-Guided project for **Web API IV** module.
+Guided project for **Node API** module 4.
 
-In this project we will learn how to deploy a Web API to `heroku`.
+In this project we will learn how to make an Express app deployable to Heroku.
 
-## Prerequisites
+## Project Setup
 
-- Sign up for a [heroku](https://www.heroku.com/) free account.
-
-## Instructions
-
-Please fork this repository and follow along **using your fork** as the instructor deploys the API to `heroku`.
+- [ ] clone the repository to your local.
+- [ ] execute `npm i` to download dependencies.
